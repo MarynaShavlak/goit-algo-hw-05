@@ -180,8 +180,8 @@ def measure_search_time(search_func, text, pattern, iterations=100):
 
 
 def main():
-    article_1_text = load_text("article_1.txt", "cp1251")
-    article_2_text = load_text("article_2.txt", "utf-8-sig")
+    article_1_text = load_text("article_1.txt", "utf-8")
+    article_2_text = load_text("article_2.txt", "utf-8")
 
     # Substrings that actually exist in the articles
     existing_pattern_article_1 = "алгоритмів у бібліотеках"
@@ -286,11 +286,11 @@ def main():
 
     md_content = "\n".join(md_lines)
 
-    with open("results.md", "w", encoding="utf-8") as results_file:
+    with open("README.md", "w", encoding="utf-8") as results_file:
         results_file.write(md_content)
 
     print("\n" + md_content)
-    print("\nРезультати збережено у файл results.md")
+    print("\nРезультати збережено у файл README.md")
 
 
 if __name__ == "__main__":
